@@ -38,5 +38,6 @@ export async function createSession() {
     throw new Error(`Failed to create session: ${error}`);
   }
   const data = await response.json();
+
   return data.client_secret as string;
 }
