@@ -1,9 +1,9 @@
 import { PortableText } from "@portabletext/react";
+import { Divide } from "lucide-react";
 import Image from "next/image";
 import { defineQuery } from "next-sanity";
-import { sanityFetch } from "@/sanity/lib/live";
 import { urlFor } from "@/sanity/lib/image";
-import { Divide } from "lucide-react";
+import { sanityFetch } from "@/sanity/lib/live";
 
 const EXPERIENCE_QUERY =
   defineQuery(`*[_type == "experience"] | order(startDate desc){

@@ -1,10 +1,12 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: // biome-ignore */
+/** biome-ignore-all lint/a11y/noSvgWithoutTitle: // biome-ignore */
+/** biome-ignore-all lint/performance/noImgElement: // biome-ignore */
 "use client";
 
-import { useRef } from "react";
-import { motion } from "motion/react";
 import DottedMap from "dotted-map";
-
+import { motion } from "motion/react";
 import { useTheme } from "next-themes";
+import { useRef } from "react";
 
 interface MapProps {
   dots?: Array<{
@@ -38,7 +40,7 @@ export default function WorldMap({
 
   const createCurvedPath = (
     start: { x: number; y: number },
-    end: { x: number; y: number }
+    end: { x: number; y: number },
   ) => {
     const midX = (start.x + end.x) / 2;
     const midY = Math.min(start.y, end.y) - 50;
@@ -46,15 +48,16 @@ export default function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg  relative font-sans">
+    <div className="w-full aspect-2/1 dark:bg-black bg-white rounded-lg  relative font-sans">
       <img
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
+        className="h-full w-full mask-[linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
         alt="world map"
         height="495"
         width="1056"
         draggable={false}
       />
+
       <svg
         ref={svgRef}
         viewBox="0 0 800 400"
