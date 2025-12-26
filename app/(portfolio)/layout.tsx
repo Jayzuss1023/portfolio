@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+/** biome-ignore-all assist/source/organizeImports: biome-ignore */
+import type Metadata from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import {
@@ -15,6 +16,8 @@ import SidebarToggle from "@/components/SidebarToggle";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { SanityLive } from "@/sanity/lib/live";
 import { FloatingDock } from "@/components/FloatingDock";
+import { ModeToggle } from "@/components/DarkModeToggle";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,19 +46,33 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <Script
-            src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js"
-            strategy="afterInteractive"
-          />
-          <SidebarProvider defaultOpen={false}>
-            <SidebarInset>{children}</SidebarInset>
-            <AppSidebar side="right" />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Script
+              src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js"
+              strategy="afterInteractive"
+            />
+            <SidebarProvider defaultOpen={false}>
+              <SidebarInset>{children}</SidebarInset>
+              <AppSidebar side="right" />
 
-            <FloatingDock />
-            <SidebarToggle />
-          </SidebarProvider>
-          {/* Listener for Sanity included into the main app */}
-          <SanityLive />
+              <FloatingDock />
+              <SidebarToggle />
+
+              {/* mode Toggle - Desktop bottom rifht next to AI chat, Mobile: top right next to burger menu */}
+              <div className="fixed md:bottom-6 md:right-24 top-4 right-18 md:top-auto md:left-auto z-20">
+                <div className="w-10 h-10 md:w-12 md:h-12">
+                  <ModeToggle />
+                </div>
+              </div>
+            </SidebarProvider>
+            {/* Listener for Sanity included into the main app */}
+            <SanityLive />
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

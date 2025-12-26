@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { defineQuery } from "next-sanity";
+import WorldMapDemo from "@/components/world-map-demo";
 import { sanityFetch } from "@/sanity/lib/live";
 import { ContactForm } from "./ContactForm";
-import WorldMapDemo from "@/components/world-map-demo";
 
 const PROFILE_QUERY = defineQuery(
   `*[_id == "singleton-profile"][0]{
