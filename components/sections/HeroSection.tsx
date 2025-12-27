@@ -24,7 +24,7 @@ const HERO_QUERY = defineQuery(`
           profileImage
       }`);
 
-async function HeroSection() {
+export async function HeroSection() {
   const { data: profile } = await sanityFetch({ query: HERO_QUERY });
 
   if (!profile) {
@@ -150,4 +150,3 @@ async function HeroSection() {
     </section>
   );
 }
-export default HeroSection;

@@ -1,10 +1,10 @@
-import type { NextConfig } from "next";
+import type NextConfig from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    domains: ["cdn.sanity.io"],
+    domains: ["cdn.sanity.io", "images.unsplash.com"],
   },
 };
 

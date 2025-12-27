@@ -2,16 +2,11 @@ import {
   AsteriskIcon,
   BookIcon,
   CaseIcon,
-  CogIcon,
-  CommentIcon,
-  ComposeIcon,
   DocumentIcon,
   DocumentsIcon,
   InlineIcon,
   ProjectsIcon,
   RocketIcon,
-  StarIcon,
-  TagIcon,
   UserIcon,
 } from "@sanity/icons";
 import type { StructureResolver } from "sanity/structure";
@@ -76,6 +71,14 @@ export const structure: StructureResolver = (S) =>
                 .icon(BookIcon)
                 .schemaType("education")
                 .child(S.documentTypeList("education").title("Education")),
+
+              S.listItem()
+                .title("Certifications")
+                .icon(DocumentIcon)
+                .schemaType("certification")
+                .child(
+                  S.documentTypeList("certification").title("Certifications"),
+                ),
             ]),
         ),
 
@@ -125,16 +128,4 @@ export const structure: StructureResolver = (S) =>
         .icon(DocumentsIcon)
         .schemaType("navigation")
         .child(S.documentTypeList("navigation").title("Navigation Links")),
-
-      S.divider(),
-
-      // Site Settings (Singleton)
-      S.listItem()
-        .title("Site Settings")
-        .icon(CogIcon)
-        .child(
-          S.document()
-            .schemaType("siteSettings")
-            .documentId("singleton-siteSettings"),
-        ),
     ]);

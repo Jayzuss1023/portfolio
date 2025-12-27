@@ -105,7 +105,7 @@ export async function ContactSection() {
                         href={profile.socialLinks.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/infom text-sm"
+                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/info:text-sm"
                       >
                         Github
                       </Link>
@@ -115,7 +115,7 @@ export async function ContactSection() {
                         href={profile.socialLinks.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/infom text-sm"
+                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/info:text-sm"
                       >
                         LinkedIn
                       </Link>
@@ -125,7 +125,7 @@ export async function ContactSection() {
                         href={profile.socialLinks.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/infom text-sm"
+                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/info:text-sm"
                       >
                         Twitter
                       </Link>
@@ -135,7 +135,7 @@ export async function ContactSection() {
                         href={profile.socialLinks.website}
                         target="_blank"
                         rel="noopener noreffer"
-                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/infom text-sm"
+                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/info:text-sm"
                       >
                         Website
                       </Link>
@@ -145,7 +145,7 @@ export async function ContactSection() {
                         href={profile.socialLinks.medium}
                         target="_blank"
                         rel="noopener noreffer"
-                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/infom text-sm"
+                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/info:text-sm"
                       >
                         Medium
                       </Link>
@@ -155,7 +155,7 @@ export async function ContactSection() {
                         href={profile.socialLinks.devto}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/infom text-sm"
+                        className="px-3 py-1.5 @md/info:px-4 @md/info:py-2 rounded-lg hover:bg-accent transition-colors text-xs @md/info:text-sm"
                       >
                         Dev.to
                       </Link>

@@ -105,7 +105,7 @@ export async function ProjectsSection() {
                   <div className="flex flex-col @xs/card:flex-row gap-2 @xs/card:gap-3 pt-2">
                     {project.liveUrl && (
                       <Link
-                        href="project.liveUrl"
+                        href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 text-center px-3 py-2 @md/card:px-4 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-xs @md/card:text-sm"
