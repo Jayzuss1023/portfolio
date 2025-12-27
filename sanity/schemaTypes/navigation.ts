@@ -23,7 +23,7 @@ export default defineType({
       name: "icon",
       title: "Icon Name",
       type: "string",
-      description: "Tabler icon name (e.g., 'IconHome', 'IconBrandGithub')",
+      description: "Tabler icon name (e.g., 'IconHome', '')",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
